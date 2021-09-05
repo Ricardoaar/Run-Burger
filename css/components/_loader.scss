@@ -1,0 +1,75 @@
+
+.loader {
+  background-color: white;
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  z-index: 3;
+  position: absolute;
+  top: 0;
+
+
+  animation: loader linear 3s forwards;
+
+
+  .balls {
+    display: flex;
+    justify-content: center;
+
+    width: 280px;
+    height: 100px;
+
+    div {
+      margin: 10px;
+      border-radius: 50%;
+      background: yellow;
+      height: 80px;
+      width: 80px;
+      transform: scale(0.2);
+      animation: scaling 3s ease-in-out infinite;
+
+      &:nth-child(2) {
+        animation-delay: 0.2s;
+      }
+
+      &:nth-child(3) {
+        animation-delay: 0.4s;
+      }
+    }
+
+
+  }
+
+
+}
+
+
+@keyframes scaling {
+  0%, 100% {
+    transform: scale(0.2);
+  }
+  50% {
+    transform: scale(1);
+  }
+}
+
+@keyframes loader {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  50% {
+
+
+  }
+  75% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
